@@ -1,9 +1,9 @@
 ---
-title: Getting Started
-author: cotes
-date: 2019-08-09 20:55:00 +0800
-categories: [Blogging, Tutorial]
-tags: [getting started]
+title: First Post
+author: babaG
+date: 2022-10-09 20:55:00 +0800
+categories: [About]
+tags: [firt post]
 pin: true
 ---
 
