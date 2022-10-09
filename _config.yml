@@ -23,7 +23,7 @@ timezone: Asia/Shanghai
 
 title: BabaG.org                          # the main title
 
-tagline: Personal blog of Pretheesh   # it will display as the sub-title
+tagline: Travel, Life, Tech  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
@@ -31,11 +31,11 @@ description: >-                        # used by seo meta and the atom feed
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://www.babag.org'
 
-github:
-  username: github_username             # change to your github username
+# github:
+  # username: github_username             # change to your github username
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: singsungwong            # change to your twitter username
 
 social:
   # Change to your full name.
@@ -44,7 +44,7 @@ social:
   email: me@bigmints.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
+    - https://twitter.com/singsungwong      # change to your twitter homepage
     # - https://github.com/username       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
@@ -86,7 +86,7 @@ img_cdn: 'https://raw.githubusercontent.com/bigmints/babag.org.github.io/master'
 avatar: '/assets/img/avatar.jpeg'
 
 # boolean type, the global switch for ToC in posts.
-toc: true
+toc: false
 
 comments:
   active:         # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
