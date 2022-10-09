@@ -2,7 +2,7 @@
 title: First Post
 author: babaG
 date: 2022-10-09 20:55:00 +0800
-categories: [About]
+categories: [Life]
 tags: [firt post]
 pin: true
 ---
