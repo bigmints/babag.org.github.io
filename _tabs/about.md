@@ -4,5 +4,8 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
+> WIP
 {: .prompt-tip }
+
+
+My name is Pretheesh. I live in Dubai and work as a UX designer. I also have co-founded a start-up called [Bapp](https://www.bappnow.com).
