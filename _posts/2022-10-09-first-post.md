@@ -3,7 +3,7 @@ title: First Post
 author: pretheesh
 date: 2022-10-09 20:55:00 +0800
 categories: [Life]
-tags: [firt post]
+tags: [First Post]
 pin: true
 ---
 
