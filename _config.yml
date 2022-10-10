@@ -86,7 +86,7 @@ img_cdn: 'https://raw.githubusercontent.com/bigmints/babag.org.github.io/master'
 avatar: '/assets/img/avatar.jpeg'
 
 # boolean type, the global switch for ToC in posts.
-toc: false
+toc: true
 
 comments:
   active:         # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
