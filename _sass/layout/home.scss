@@ -31,7 +31,7 @@
     &.active {
       .page-link {
         background-color: var(--btn-paginator-hover-color);
-        color: var(--btn-text-color);
+        color: #ffffff;
       }
     }
 
@@ -39,7 +39,7 @@
       cursor: not-allowed;
 
       .page-link {
-        color: rgba(108, 117, 125, 0.57);
+        color: #000000;
         border-color: var(--btn-paginator-border-color);
         background-color: var(--button-bg);
       }

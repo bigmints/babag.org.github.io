@@ -1,7 +1,9 @@
 /*
   The common styles
 */
-@import url('https://fonts.googleapis.com/css2?family=Lato');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 
 html {
   @media (prefers-color-scheme: light) {
@@ -33,7 +35,7 @@ body {
   background: var(--body-bg);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.75;
 }
 
@@ -43,6 +45,7 @@ h1 {
   @extend %heading;
 
   font-size: 1.9rem;
+  
 }
 
 h2 {
@@ -185,6 +188,22 @@ i { /* fontawesome icons */
   }
 }
 
+.card-primary{
+  background-color: #fdd93d;
+  border: none;
+  padding: 10px 35px;
+}
+.card-secondary{
+  background-color: #17a2b8;
+  border: none;
+  padding: 10px 35px;
+}
+.card-green{
+  background-color: #08a057;
+  border: none;
+  padding: 10px 35px;
+}
+
 @keyframes fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -260,9 +279,9 @@ img[data-src] {
     margin: 0 0.35rem 0.5rem 0;
 
     &:hover {
-      background-color: #2a408e;
-      border-color: #2a408e;
-      color: #fff;
+      background-color: #fdd93d;
+      border-color: #fdd93d;
+      color: #000000;
       transition: none;
     }
   }
@@ -696,7 +715,7 @@ $sidebar-display: "sidebar-display";
       font-weight: 900;
       font-size: 1.5rem;
       letter-spacing: 0.5px;
-      color: rgba(134, 133, 133, 99%);
+      color: #ffffff;
     }
   }
 
