@@ -4,9 +4,9 @@
 
 /* sidebar */
 
-$sidebar-width: 260px !default;        /* the basic width */
-$sidebar-width-small: 210px !default;  /* screen width: >= 850px, <= 1199px (iPad landscape) */
-$sidebar-width-large: 350px !default;  /* screen width: >= 1650px */
+$sidebar-width: 0 !default;        /* the basic width */
+$sidebar-width-small: 0 !default;  /* screen width: >= 850px, <= 1199px (iPad landscape) */
+$sidebar-width-large: 0 !default;  /* screen width: >= 1650px */
 
 /* tabs of sidebar */
 
@@ -18,7 +18,7 @@ $cursor-width: 2px !default;    /* the cursor width of the selected tab */
 
 /* other framework sizes */
 
-$topbar-height: 3rem !default;
+$topbar-height: 1rem !default;
 
 $search-max-width: 210px !default;
 

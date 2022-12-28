@@ -1,8 +1,48 @@
-<!--
-  The Side Bar
--->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <a class="navbar-brand " href="{{ '/' | relative_url }}"  id="avatar">
+    {% if site.avatar != empty and site.avatar %}
+    {% capture avatar_url %}
+      {% if site.avatar contains '://' %}
+        {{ site.avatar }}
+      {% elsif site.img_cdn != empty and site.img_cdn %}
+        {{ site.avatar | prepend: site.img_cdn }}
+      {% else %}
+        {{ site.avatar | relative_url }}
+      {% endif %}
+    {% endcapture %}
+    <img src="{{ avatar_url | strip }}" alt="avatar" onerror="this.style.display='none'" width="30">
+  {% endif %}
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<div id="sidebar" class="d-flex flex-column align-items-end">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      {% for tab in site.tabs %}
+    <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
+      <a href="{{ tab.url | relative_url }}" class="nav-link">
+        <i class="fa-fw {{ tab.icon }} ml-xl-3 mr-xl-3 unloaded"></i>
+        {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
+
+        <span>{{ site.data.locales[lang].tabs.[tab_name] | default: tab.title  }}</span>
+      </a>
+    </li> 
+    {% endfor %}
+      
+    </ul>
+    <i id="search-trigger" class="fas fa-search fa-fw"></i>
+    <span id="search-wrapper" class="align-items-center">
+      <i class="fas fa-search fa-fw"></i>
+      <input class="form-control" id="search-input" type="search"
+        aria-label="search" autocomplete="off" placeholder="{{ site.data.locales[lang].search.hint | capitalize }}...">
+    </span>
+    <span id="search-cancel" >{{ site.data.locales[lang].search.cancel }}</span>
+  </div>
+</nav>
+
+<!-- <div id="sidebar" class="d-flex flex-column align-items-end">
   <div class="profile-wrapper text-center">
     <div id="avatar">
       <a href="{{ '/' | relative_url }}" class="mx-auto">
@@ -26,18 +66,18 @@
     </div>
     <div class="site-subtitle">{{ site.tagline }}</div>
 
-  </div><!-- .profile-wrapper -->
+  </div>
 
   <ul class="w-100">
 
-    <!-- home -->
+
     <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
       <a href="{{ '/' | relative_url }}" class="nav-link">
         <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i>
         <span>{{ site.data.locales[lang].tabs.home | upcase }}</span>
       </a>
     </li>
-    <!-- the real tabs -->
+    
     {% for tab in site.tabs %}
     <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
       <a href="{{ tab.url | relative_url }}" class="nav-link">
@@ -46,10 +86,10 @@
 
         <span>{{ site.data.locales[lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
       </a>
-    </li> <!-- .nav-item -->
+    </li> 
     {% endfor %}
 
-  </ul> <!-- ul.nav.flex-column -->
+  </ul> 
 
   <div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center">
 
@@ -88,6 +128,6 @@
 
     {% endfor %}
 
-  </div> <!-- .sidebar-bottom -->
+  </div> 
 
-</div><!-- #sidebar -->
+</div> -->

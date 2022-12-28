@@ -25,20 +25,20 @@ layout: page
 
 <!-- Get default posts -->
 
-{% assign default_beg = offset | minus: pinned.size %}
+<!-- {% assign default_beg = offset | minus: pinned.size %} -->
 
-{% if default_beg < 0 %}
+<!-- {% if default_beg < 0 %}
   {% assign default_beg = 0 %}
-{% endif %}
-
+{% endif %} -->
+<!-- 
 {% assign default_num = paginator.posts | size | minus: pinned_num  %}
-{% assign default_end = default_beg | plus: default_num | minus: 1 %}
+{% assign default_end = default_beg | plus: default_num | minus: 1 %} -->
 
-{% if default_num > 0 %}
+<!-- {% if default_num > 0 %}
   {% for i in (default_beg..default_end) %}
     {% assign posts = posts | push: default[i] %}
   {% endfor %}
-{% endif %}
+{% endif %} -->
 <br/>
 <div class="card card-primary">
  
@@ -50,6 +50,54 @@ layout: page
       <a href="#" class="btn btn-secondary">About Me</a>
       <br/><br/>
   </div>
+</div>
+<br/>
+
+  <div class="card-deck">
+  {% for pin in pinned %}
+
+  <div class="card">
+    <img class="card-img-top img-fluid" src="{{ pin.cover }}" alt="Card image cap">
+    <div class="card-body">
+      <h3 class="card-title"><a href="{{ pin.url | relative_url }}">{{ pin.title }}</a></h3>
+      
+     
+    
+      <p class="card-text">
+        {% include no-linenos.html content=pin.content %}
+        {{ content | markdownify | strip_html | truncate: 100 | escape }}
+      </p>
+      
+      <div class="post-meta text-muted d-flex">
+        <div class="mr-auto">
+  
+          <!-- posted date -->
+          <i class="far fa-calendar fa-fw"></i>
+          {% include datetime.html date=pin.date %}
+  
+          <!-- categories -->
+          {% if pin.categories.size > 0 %}
+            <i class="far fa-folder-open fa-fw"></i>
+            <span>
+            {% for category in pin.categories %}
+              {{ category }}
+              {%- unless forloop.last -%},{%- endunless -%}
+            {% endfor %}
+            </span>
+          {% endif %}
+  
+        </div>
+  
+       
+  
+      </div> <!-- .post-meta -->
+
+
+    </div>
+  </div>
+
+
+  {% endfor %}
 </div>
 <h1>Recent Posts</h1>
 <hr/>
@@ -107,3 +155,6 @@ layout: page
 {% if paginator.total_pages > 0 %}
   {% include post-paginator.html %}
 {% endif %}
+
+
+  

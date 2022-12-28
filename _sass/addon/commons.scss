@@ -207,6 +207,7 @@ i { /* fontawesome icons */
   box-shadow: -8px 8px #eee;
 }
 
+
 @keyframes fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -896,7 +897,7 @@ $sidebar-display: "sidebar-display";
 
 #topbar-wrapper {
   height: $topbar-height;
-  position: fixed;
+  // position: fixed;
   top: 0;
   left: $sidebar-width; /* same as sidebar width */
   right: 0;
