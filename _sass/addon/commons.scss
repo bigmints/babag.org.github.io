@@ -1106,7 +1106,7 @@ $sidebar-display: "sidebar-display";
 
 #core-wrapper,
 #panel-wrapper {
-  margin-top: $topbar-height; /* same as the height of topbar */
+  margin-top:0; /* same as the height of topbar */
 }
 
 #topbar-wrapper.row,
@@ -1570,7 +1570,7 @@ $sidebar-display: "sidebar-display";
 
   #core-wrapper,
   #tail-wrapper {
-    padding-right: 4.5rem !important;
+    padding-right: 0.5rem !important;
   }
 
   #back-to-top {

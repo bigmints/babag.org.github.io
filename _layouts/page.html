@@ -40,6 +40,7 @@ layout: default
   <div id="panel-wrapper" class="col-xl-3 pl-2 text-muted">
 
     <div class="access">
+      
       {% include update-list.html %}
       {% include trending-tags.html %}
     </div>
@@ -48,6 +49,8 @@ layout: default
       {% assign _include_path = _include | append: '.html' %}
       {% include {{ _include_path }} %}
     {% endfor %}
+
+    
   </div>
 
 </div>

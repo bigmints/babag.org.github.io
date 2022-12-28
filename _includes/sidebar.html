@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   
   <a class="navbar-brand " href="{{ '/' | relative_url }}"  id="avatar">
@@ -11,15 +12,15 @@
         {{ site.avatar | relative_url }}
       {% endif %}
     {% endcapture %}
-    <img src="{{ avatar_url | strip }}" alt="avatar" onerror="this.style.display='none'" width="30">
+    <img src="{{ avatar_url | strip }}" alt="avatar" onerror="this.style.display='none'" width="30"> {{ site.title }}
   {% endif %}
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav">
       {% for tab in site.tabs %}
     <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
       <a href="{{ tab.url | relative_url }}" class="nav-link">
@@ -30,15 +31,9 @@
       </a>
     </li> 
     {% endfor %}
-      
+    
     </ul>
-    <i id="search-trigger" class="fas fa-search fa-fw"></i>
-    <span id="search-wrapper" class="align-items-center">
-      <i class="fas fa-search fa-fw"></i>
-      <input class="form-control" id="search-input" type="search"
-        aria-label="search" autocomplete="off" placeholder="{{ site.data.locales[lang].search.hint | capitalize }}...">
-    </span>
-    <span id="search-cancel" >{{ site.data.locales[lang].search.cancel }}</span>
+    
   </div>
 </nav>
 
