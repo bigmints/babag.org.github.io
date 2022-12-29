@@ -1291,7 +1291,7 @@ $sidebar-display: "sidebar-display";
       transform: translateX(#{$sidebar-width});
     }
   }
-
+ 
   #sidebar {
     @include slide;
 
@@ -1374,6 +1374,11 @@ $sidebar-display: "sidebar-display";
   footer .d-flex > div {
     width: 312px;
   }
+  .navbar{
+    margin: 30px 22px 0px 24px;
+    border-radius: 4px;
+  }
+
 }
 
 /* Sidebar is visible */
@@ -1381,6 +1386,10 @@ $sidebar-display: "sidebar-display";
   /* Solved jumping scrollbar */
   html {
     overflow-y: scroll;
+  }
+  .navbar{
+    margin: 30px 22px 0px 24px;
+    border-radius: 4px;
   }
 
   #main-wrapper, footer {
